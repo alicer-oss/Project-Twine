@@ -9,11 +9,40 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play MA Game 2.</tw-noscript></noscript></tw-story>
-<tw-storydata name="MA Game 2" startnode="1" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="16EAB7B3-BB07-4C4A-B18E-C213B871C58B" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position="775,275" size="100,100">(set: $name to (prompt: &quot;Gib deinen Namen ein&quot;, &quot;Default Name&quot;))
+<tw-storydata name="MA Game 2" startnode="1" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="16EAB7B3-BB07-4C4A-B18E-C213B871C58B" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">body {
+  background-color: #1a1a2e;
+  font-family: 'Segoe UI', sans-serif;
+  color: #e0e0e0;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
 
-Wilkommen, $name
+tw-link, .enchantment-link {
+  display: inline-block;
+  margin: 0.5em 0;
+  padding: 0.8em 2em;
+  background: #16213e;
+  border: 2px solid #5a8dee;
+  border-radius: 8px;
+  color: #5a8dee;
+  text-decoration: none;
+  font-size: 17px;
+}
 
-Stelle dir vor, du findest eine Person aus deiner Schule schon seit längerer Zeit attraktiv. In den letzten Wochen habt ihr immer wieder geschrieben und euch in der Schule öfter unterhalten.
+tw-link:hover {
+  background: #5a8dee;
+  color: white;
+}
+
+h2 {
+  color: #5a8dee;
+  font-size: 24px;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position="775,400" size="100,100">(set: $name to (prompt: &quot;Gib deinen Namen ein&quot;, &quot;Default Name&quot;))
+
+Wilkommen $name,
+
+stelle dir vor, du findest eine Person aus deiner Schule schon seit längerer Zeit attraktiv. In den letzten Wochen habt ihr immer wieder geschrieben und euch in der Schule öfter unterhalten.
 
 Heute hast du die Gelegenheit, diese Person nach einem Date zu fragen.
 
@@ -21,25 +50,24 @@ Heute hast du die Gelegenheit, diese Person nach einem Date zu fragen.
 
 (-): Vielleicht wirst du abgelehnt oder es wird unangenehm, wenn andere davon erfahren.
 
+
 &lt;b&gt; $name, welche Entscheidung triffst du heute? &lt;/b&gt;
 
    
 (link: &quot;Ich frage die Person nach einem Treffen&quot;)[(set: $wahl to &quot;Approach&quot;)(goto: &quot;Theorie&quot;)]
-(link: &quot;Ich lasse es lieber und frage nicht&quot;)[(set: $wahl to &quot;Avoidance&quot;)(goto: &quot;Theorie&quot;)]</tw-passagedata><tw-passagedata pid="2" name="Theorie" tags="" position="775,400" size="100,100">(if: $wahl is &quot;Approach&quot;)[Du hast dich also für den **Approach** (die Annäherung) entschieden! Mutig, trotz der Möglichkeit einer Ablehnung.]
+(link: &quot;Ich lasse es lieber und frage nicht&quot;)[(set: $wahl to &quot;Avoidance&quot;)(goto: &quot;Theorie&quot;)]
+</tw-passagedata><tw-passagedata pid="2" name="Theorie" tags="" position="900,400" size="100,100">(if: $wahl is &quot;Approach&quot;)[Du hast dich also für den **Approach** (die Annäherung) entschieden! Mutig, trotz der Möglichkeit einer Ablehnung.]
 (if: $wahl is &quot;Avoidance&quot;)[Du hast dich für **Avoidance** (die Vermeidung) entschieden! Sicher ist sicher, eine mögliche Ablehnung bleibt dir erspart.]
+Dieses Zögern kennt jede:r, $name.
 
-Genau dieses Zögern nennt man in der Psychologie einen Approach-Avoidance-Konflikt, nennen wir&#39;s einfacher: einen Bauchgefühl-Konflikt.
+Dein Gehirn wägt blitzschnell ab. Belohnung (Date, Nähe) gegen Risiko (Ablehnung, Peinlichkeit).
 
-Dieselbe Entscheidung bringt eine Chance auf was Gutes (Approach) und ein Risiko (Avoidance) mit sich. Dein Gehirn muss ständig zwischen beidem abwägen.
+Psychologen nennen das einen Bauchgefühl-Konflikt, oder einen Approach-Avoidance-Konflikt.
 
-[[Okay, aber warum ist das wichtig?]]</tw-passagedata><tw-passagedata pid="3" name="Okay, aber warum ist das wichtig?" tags="" position="775,525" size="100,100">Bauchgefühl-Konflikte begegnen dir überall:
+Das passiert dir ständig. Neue Frreundschaften, Bewerbungen, Dates.
+&lt;img src=&quot;https://github.com/alicer-oss/Project-Twine/blob/main/ChatGPT%20Image%2022.%20Juni%202026,%2015_27_55.png?raw=true&quot; style=&quot;width: 30%; display: block; margin: 15px auto;&quot;&gt;
 
-🧑‍🤝‍🧑 Neue Freundschaften schließen
-💼 Sich bewerben
-🎤 Eine Präsentation halten
-💌 Jemanden nach einem Date fragen
-
-[[Weiter]]</tw-passagedata><tw-passagedata pid="4" name="Weiter" tags="" position="775,700" size="100,100">Erinnerst du dich an die Date-Frage von eben, $name? Du hattest die freie Wahl, ob du fragst oder nicht.
+[[Weiter]]</tw-passagedata><tw-passagedata pid="3" name="Okay, aber warum ist das wichtig?" tags="" position="375,475" size="100,100">Erinnerst du dich an die Date-Frage von eben, $name? Du hattest die freie Wahl, ob du fragst oder nicht.
 
 Aber stell dir das vor: Du musst gleich vor der ganzen Klasse eine Präsentation halten. Egal wie nervös du bist, du musst aufstehen und anfangen zu sprechen. Keine Wahl.
 
@@ -47,25 +75,38 @@ Manchmal entscheiden wir frei. Manchmal nicht. Und das verändert, wie sich so e
 
 Genau das schauen wir uns jetzt an. 
 
-Willkommen in meinem Mini-Labor!
+Willkommen in meinem Mini-Labor!</tw-passagedata><tw-passagedata pid="4" name="Weiter" tags="" position="1025,400" size="100,100">Bei manchen Menschen, z.B. bei starker Angst, ist diese Waage zwischen Belohnung und Risiko besonders verschoben. Sie vermeiden dann Dinge, die eigentlich gut für sie wären.
 
-[[Experiment starten]]</tw-passagedata><tw-passagedata pid="5" name="Verstanden, weiter" tags="" position="900,650" size="100,100">Normalerweise tauchen diese Symbole auch einzeln auf. Heute schauen wir uns aber genau den Moment an, in dem beide gleichzeitig da sind – denn das ist der eigentliche Konflikt.
+Stell dir vor, jemand hat starke Angst vor sozialen Situationen. Ein Vorstellungsgespräch wäre wichtig für die Karriere, aber die Angst gewinnt. Die Person sagt ab.
 
-🔵 + 🔺 zusammen: Greifst du zu, bekommst du beides – Geld und Buzzer-Ton. Sicher, nicht zufällig.
+Das ist nicht Schwäche. Das ist ein Gehirn, das Risiko höher bewertet als Belohnung.
 
-(Bild: beide Symbole nebeneinander.)
+Die gute Nachricht ist, wenn man versteht, wie dieser Mechanismus funktioniert, kann man Therapien gezielt verbessern: Z.B. Bedrohungsreize mit Belohnungen koppeln, dann sinkt die Hemmschwelle, das Schwierige anzugehen. Statt &quot;halt einfach aus&quot; lautet die Botschaft: &quot;Es lohnt sich dranzubleiben.&quot;
 
-[[Los geht&#39;s]]</tw-passagedata><tw-passagedata pid="6" name="Los geht&#39;s" tags="" position="1025,650" size="100,100">🔵🔺 Beide sind da. (Bild: beide Symbole zusammen, ohne Türen.)
+Genau diese Mechanismen untersuche ich in meiner Masterarbeit. Und du kannst jetzt selbst erleben, wie das im Labor aussieht.
 
-[[Weiter|P6r]]</tw-passagedata><tw-passagedata pid="7" name="Experiment starten" tags="" position="900,525" size="100,100">Bevor&#39;s losgeht, lern zwei Symbole kennen:
+[[Ins Mini-Labor|Drei Symbole, eine Regel]]</tw-passagedata><tw-passagedata pid="5" name="Verstanden, weiter" tags="" position="900,650" size="100,100">Normalerweise tauchen diese Symbole auch einzeln auf. Jetzt schauen wir uns aber genau den Moment an, in dem beide gleichzeitig da sind, denn das ist der eigentliche Konflikt.
 
-Blauer Kreis = Belohnung. Geld, immer +50 Cent.
+🔵 + 🔺 zusammen: Greifst du zu, bekommst du beides, Geld und Buzzer-Ton. Sicher, nicht zufällig.
+
+&lt;img src=&quot;https://github.com/alicer-oss/Project-Twine/blob/main/combination_pic_1_2.jpg?raw=true&quot; style=&quot;width: 40%; display: block; margin: 15px auto;&quot;&gt;
+
+[[Los geht&#39;s]]</tw-passagedata><tw-passagedata pid="6" name="Los geht&#39;s" tags="" position="1025,650" size="100,100">Beide sind da. 
+
+&lt;img src=&quot;https://github.com/alicer-oss/Project-Twine/blob/main/combination_pic_1_2.jpg?raw=true&quot; style=&quot;width: 40%; display: block; margin: 15px auto;&quot;&gt;
+
+[[Weiter|P6r]]</tw-passagedata><tw-passagedata pid="7" name="Experiment starten" tags="" position="775,650" size="100,100">Bevor&#39;s losgeht, lern drei Symbole kennen:
+
+Blauer Kreis = Belohnung. Immer +50 Cent.
 Lila Dreieck = Buzzer-Ton. Immer unangenehm.
 Gelbes Quadrat = nichts passiert 
 
-(Bild: blauer Kreis einzeln, dann lila Dreieck einzeln.)
+&lt;img src=&quot;https://raw.githubusercontent.com/alicer-oss/Project-Twine/main/Figuren_erklärung.png&quot; style=&quot;width: 40%; display: block; margin: 15px auto;&quot;&gt;
 
-Merk dir das kurz.
+Und so funktionieren die Türen, merk dir das für alle Runden:
+
+Untere Tür = ich greife zu 
+Obere Tür = ich lass es 
 
 [[Verstanden, weiter]]</tw-passagedata><tw-passagedata pid="8" name="Ich greife zu" tags="" position="962.5,775" size="100,100">+50 Cent. Und der Buzzer-Ton. Beides, wie angekündigt.
 
@@ -73,36 +114,63 @@ Na, $name, kurz gezögert?
 
 [[Weiter|P7]]
 
+&lt;audio id=&quot;meinSound&quot; autoplay&gt;
+  &lt;source src=&quot;https://raw.githubusercontent.com/alicer-oss/Project-Twine/main/dragon-studio-censor-beep-3-372460.mp3&quot; 
+          type=&quot;audio/mpeg&quot;&gt;
+&lt;/audio&gt;
+
+&lt;script&gt;
+  var audio = document.getElementById(&quot;meinSound&quot;);
+  setTimeout(function() {
+    audio.pause();
+  }, 7000);
+&lt;/script&gt;
+
 </tw-passagedata><tw-passagedata pid="9" name="Ich lass es" tags="" position="1087.5,775" size="100,100">Kein Geld. Kein Buzzer-Ton. Sicher gespielt.
 
 Na, $name, kurz gezögert?
 
-[[Weiter|P7]]</tw-passagedata><tw-passagedata pid="10" name="P7" tags="" position="962.5,900" size="100,100">Dieses kurze Zögern kennt jede:r. Dein Gehirn wägt in einer Sekunde ab: Belohnung gegen Risiko.
+[[Weiter|P7]]</tw-passagedata><tw-passagedata pid="10" name="P7" tags="" position="962.5,900" size="100,100">Dieses kurze Zögern kennt jede:r. Dein Gehirn wägt in einer Sekunde ab, Belohnung gegen Risiko.
 
 [[Weiter|P8]]</tw-passagedata><tw-passagedata pid="11" name="P8" tags="" position="962.5,1025" size="100,100">Eben durftest du frei wählen: zwei offene Türen, du entscheidest.
 
-Manchmal ist aber nur eine Tür offen. Dann musst du genau das tun, was diese eine Tür vorgibt – auch wenn&#39;s deinem ersten Impuls widerspricht.
+Manchmal ist aber nur eine Tür offen. Dann musst du genau das tun, was diese eine Tür vorgibt, auch wenn&#39;s deinem ersten Impuls widerspricht.
 
 Das probieren wir jetzt aus.
 
 [[Weiter|P9]]
-</tw-passagedata><tw-passagedata pid="12" name="P9" tags="" position="1100,1025" size="100,100">🔵🔺 Wieder da. (Bild: beide Symbole zusammen, ohne Türen.)
+</tw-passagedata><tw-passagedata pid="12" name="P9" tags="" position="1100,1025" size="100,100">🔵🔺 Wieder da.
+
+&lt;img src=&quot;https://github.com/alicer-oss/Project-Twine/blob/main/combination_pic_1_2.jpg?raw=true&quot; style=&quot;width: 40%; display: block; margin: 15px auto;&quot;&gt;
 
 [[Weiter|P9r]]</tw-passagedata><tw-passagedata pid="13" name="P9a" tags="" position="1225,1025" size="100,100">+50 Cent. Und der Buzzer-Ton.
 
 Anders als eben, $name? 
 
-[[Weiter |Intro]]</tw-passagedata><tw-passagedata pid="14" name="P10" tags="" position="1725,825" size="100,100">Du hast jetzt einiges erlebt, $name: freie Wahl, erzwungene Annäherung, erzwungene Vermeidung – und Situationen, in denen nur eine Sache auf dem Spiel stand statt beider gleichzeitig.
+[[Weiter |Intro]]
 
-Bei freier Wahl musstest du abwägen. Bei den erzwungenen Runden gab&#39;s nichts abzuwägen – die Reaktion stand schon fest, manchmal sogar gegen deinen ersten Impuls.
+&lt;audio id=&quot;meinSound&quot; autoplay&gt;
+  &lt;source src=&quot;https://raw.githubusercontent.com/alicer-oss/Project-Twine/main/dragon-studio-censor-beep-3-372460.mp3&quot; 
+          type=&quot;audio/mpeg&quot;&gt;
+&lt;/audio&gt;
+
+&lt;script&gt;
+  var audio = document.getElementById(&quot;meinSound&quot;);
+  setTimeout(function() {
+    audio.pause();
+  }, 7000);
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="14" name="P10" tags="" position="1950,1425" size="100,100">Du hast jetzt einiges erlebt, $name: freie Wahl, erzwungene Annäherung, erzwungene Vermeidung, und Situationen, in denen nur eine Sache auf dem Spiel stand statt beider gleichzeitig.
+
+Bei freier Wahl musstest du abwägen. Bei den erzwungenen Runden gab&#39;s nichts abzuwägen, die Reaktion stand schon fest, manchmal sogar gegen deinen ersten Impuls.
 
 Genau diesen Unterschied nutzen Forscher:innen wie ich, um besser zu verstehen, wie unser Gehirn mit solchen Bauchgefühl-Konflikten umgeht.
 
 [[Weiter|P11]]
 
-</tw-passagedata><tw-passagedata pid="15" name="P11" tags="" position="1700,1050" size="100,100">Manche Menschen lassen sich stärker vom Risiko leiten, andere stärker von der Belohnung. Beides ist normal – Menschen sind hier einfach verschieden.
+</tw-passagedata><tw-passagedata pid="15" name="P11" tags="" position="2100,1425" size="100,100">Manche Menschen lassen sich stärker vom Risiko leiten, andere stärker von der Belohnung. Beides ist normal, Menschen sind hier einfach verschieden.
 
-Weiter → [[P12]]</tw-passagedata><tw-passagedata pid="16" name="P12" tags="" position="1850,900" size="100,100">Drei Dinge, die du mitnehmen kannst, $name:
+[[Weiter|P12]]
+</tw-passagedata><tw-passagedata pid="16" name="P12" tags="" position="2225,1425" size="100,100">Drei Dinge, die du mitnehmen kannst, $name:
 
 1. Diese Bauchgefühl-Konflikte begegnen dir ständig: beim Date, bei der Präsentation, überall im Alltag.
 2. Ob du frei wählen kannst oder nicht, verändert, wie sich der Konflikt anfühlt.
@@ -114,10 +182,14 @@ Was ich noch nicht genau weiß: was im Gehirn passiert, wenn mehrere Symbole gle
 
 Falls du mehr darüber lernen willst: Dieser Konflikt heißt in der Wissenschaft Approach-Avoidance-Konflikt.
 
-[[Und das letzte|P13]]</tw-passagedata><tw-passagedata pid="17" name="P6r" tags="" position="1150,650" size="100,100">Zwei Türen öffnen sich. Du hast die freie Wahl. (Bild: zwei offene Türen.)
+[[Und das letzte|P13]]</tw-passagedata><tw-passagedata pid="17" name="P6r" tags="" position="1150,650" size="100,100">Zwei Türen öffnen sich. Du hast die freie Wahl. 
+
+&lt;img src=&quot;https://github.com/alicer-oss/Project-Twine/blob/main/Frei_T%C3%BCr.png?raw=true&quot;width: 60%; display: block; margin: 15px auto;&quot;&gt;
 
 [[Ich greife zu]]
-[[Ich lass es]]</tw-passagedata><tw-passagedata pid="18" name="P9r" tags="" position="962.5,1150" size="100,100">Nur die untere Tür öffnet sich. (Bild: untere Tür offen, obere geschlossen.)
+[[Ich lass es]]</tw-passagedata><tw-passagedata pid="18" name="P9r" tags="" position="962.5,1150" size="100,100">Nur die untere Tür öffnet sich.
+
+&lt;img src=&quot;https://github.com/alicer-oss/Project-Twine/blob/main/Gezwungen_T%C3%BCr.png?raw=true&quot;width: 60%; display: block; margin: 15px auto;&quot;&gt;
 
 [[Ich greife zu|P9a]]
 </tw-passagedata><tw-passagedata pid="19" name="Intro" tags="" position="1225,1150" size="100,100">Jetzt kommt ein drittes Symbol dazu: 🟨 Gelbes Quadrat = neutral. Da passiert nie etwas.
@@ -128,32 +200,51 @@ Damit probieren wir noch drei kurze Situationen aus, $name,  ganz ohne große Er
 </tw-passagedata><tw-passagedata pid="20" name="Uebung1" tags="" position="1350,1150" size="100,100">🔵🟨 erscheinen. (Bild: blauer Kreis + gelbes Quadrat.)
 
 [[Weiter|Uebung1r]]
-</tw-passagedata><tw-passagedata pid="21" name="Uebung1r" tags="" position="1475,1150" size="100,100">(Bild: zwei offene Türen.)
+</tw-passagedata><tw-passagedata pid="21" name="Uebung1r" tags="" position="1475,1150" size="100,100">&lt;img src=&quot;https://github.com/alicer-oss/Project-Twine/blob/main/Frei_T%C3%BCr.png?raw=true&quot;width: 60%; display: block; margin: 15px auto;&quot;&gt;
 
 [[Ich greife zu|Uebung1a]]
-[[Ich lasse es|Uebung1b]]</tw-passagedata><tw-passagedata pid="22" name="Uebung1a" tags="" position="1412.5,1275" size="100,100">+50 Cent. Kein Buzzer-Ton diesmal – das Quadrat bringt ja nichts mit. → [[Uebung2]]
+[[Ich lasse es|Uebung1b]]</tw-passagedata><tw-passagedata pid="22" name="Uebung1a" tags="" position="1412.5,1275" size="100,100">+50 Cent. Kein Buzzer-Ton diesmal, das Quadrat bringt ja nichts mit. 
 
-</tw-passagedata><tw-passagedata pid="23" name="Uebung1b" tags="" position="1537.5,1275" size="100,100">Nichts passiert. → [[Uebung2]]
+[[Weiter|Uebung2]]
+
+</tw-passagedata><tw-passagedata pid="23" name="Uebung1b" tags="" position="1537.5,1275" size="100,100">Nichts passiert. 
+
+[[Weiter|Uebung2]]
+
 
 </tw-passagedata><tw-passagedata pid="24" name="Uebung2" tags="" position="1475,1400" size="100,100">🔺🟨 erscheinen. (Bild: lila Dreieck + gelbes Quadrat.)
 
 [[Weiter|Uebung2r]]</tw-passagedata><tw-passagedata pid="25" name="Uebung2r" tags="" position="1625,1400" size="100,100">(Bild: zwei offene Türen.)
 
 [[Ich greife zu|Uebung2a]]
-[[Ich lass es|Uebung2b]]</tw-passagedata><tw-passagedata pid="26" name="Uebung2a" tags="" position="1562.5,1525" size="100,100">Buzzer-Ton. Aber kein Geld – das Quadrat bringt ja nichts mit. → [[Uebung3]]</tw-passagedata><tw-passagedata pid="27" name="Uebung2b" tags="" position="1687.5,1525" size="100,100">Nichts passiert. → [[Uebung3]]
+[[Ich lass es|Uebung2b]]</tw-passagedata><tw-passagedata pid="26" name="Uebung2a" tags="" position="1562.5,1525" size="100,100">Buzzer-Ton. Aber kein Geld, das Quadrat bringt ja nichts mit. 
 
-</tw-passagedata><tw-passagedata pid="28" name="Uebung3" tags="" position="1650,1650" size="100,100">🔵🔺 wieder da, der bekannte Konflikt. (Bild: beide Symbole.)
+[[Weiter|Uebung3]]
+
+&lt;audio id=&quot;meinSound&quot; autoplay&gt;
+  &lt;source src=&quot;https://raw.githubusercontent.com/alicer-oss/Project-Twine/main/dragon-studio-censor-beep-3-372460.mp3&quot; 
+          type=&quot;audio/mpeg&quot;&gt;
+&lt;/audio&gt;
+
+&lt;script&gt;
+  var audio = document.getElementById(&quot;meinSound&quot;);
+  setTimeout(function() {
+    audio.pause();
+  }, 7000);
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="27" name="Uebung2b" tags="" position="1687.5,1525" size="100,100">Nichts passiert. 
+
+[[Weiter|Uebung3]]</tw-passagedata><tw-passagedata pid="28" name="Uebung3" tags="" position="1650,1650" size="100,100">🔵🔺 wieder da, der bekannte Konflikt.
+
+&lt;img src=&quot;https://github.com/alicer-oss/Project-Twine/blob/main/combination_pic_1_2.jpg?raw=true&quot; style=&quot;width: 40%; display: block; margin: 15px auto;&quot;&gt;
 
 [[Weiter|Uebung3r]]
-</tw-passagedata><tw-passagedata pid="29" name="Uebung3r" tags="" position="1650,1775" size="100,100">(Bild: obere Tür offen, untere geschlossen.)
+</tw-passagedata><tw-passagedata pid="29" name="Uebung3r" tags="" position="1650,1775" size="100,100">&lt;img src=&quot;https://github.com/alicer-oss/Project-Twine/blob/main/Gezwungen_T%C3%BCr.png?raw=true&quot;width: 60%; display: block; margin: 15px auto;&quot;&gt;
 
 [[Ich lass es|Uebung3a]]
+</tw-passagedata><tw-passagedata pid="30" name="Uebung3a" tags="" position="1775,1775" size="100,100">Du musstest aussteigen, obwohl Geld zu holen gewesen wäre. Kein Buzzer-Ton, aber auch kein Geld.
 
-
-(Technischer Hinweis: nur ein Link – erzwungene Vermeidung, die noch fehlende Variante.)</tw-passagedata><tw-passagedata pid="30" name="Uebung3a" tags="" position="1775,1775" size="100,100">Du musstest aussteigen – obwohl Geld zu holen gewesen wäre. Kein Buzzer-Ton, aber auch kein Geld.
-
-[[Weiter zur Auswertung|P10]]</tw-passagedata><tw-passagedata pid="31" name="P13" tags="" position="1850,1025" size="100,100">„Between stimulus and response there is a space. In that space is our power to choose our response.&quot;
-— Viktor Frankl
+[[Weiter zur Auswertung|P10]]</tw-passagedata><tw-passagedata pid="31" name="P13" tags="" position="2350,1425" size="100,100">*„Between stimulus and response there is a space. In that space is our power to choose our response.&quot;*
+					— Viktor Frankl
 
 Was passiert in diesem Moment im Gehirn? Was verändert sich, wenn wir keine Wahl haben?
 
@@ -161,7 +252,198 @@ Die Antworten gibt&#39;s in meiner Masterarbeit.
 
 Danke, dass du mitgemacht hast. 💙
 
-[[Ende]]</tw-passagedata><tw-passagedata pid="32" name="Ende" tags="" position="1850,1150" size="100,100"></tw-passagedata></tw-storydata>
+[[Ende]]</tw-passagedata><tw-passagedata pid="32" name="Ende" tags="" position="2725,1250" size="100,100"></tw-passagedata><tw-passagedata pid="33" name="Drei Symbole, eine Regel" tags="" position="1200,500" size="100,100">Im echten Experiment lernen Teilnehmende zuerst, was drei Symbole bedeuten, durch 18 Wiederholungen, je 6 pro Symbol. Wir machen das kurz und direkt:
+
+&lt;img src=&quot;https://raw.githubusercontent.com/alicer-oss/Project-Twine/main/Figuren_erklärung.png&quot; style=&quot;width: 35%; display: block; margin: 15px auto;&quot;&gt;
+
+Blauer Kreis = du bekommst Geld (+50 Cent)
+Lila Dreieck = du bekommst einen kurzen Buzzer-Ton 
+Gelbes Quadrat = nichts passiert
+
+Eine Regel gilt immer:
+Annähern = du bekommst, was die Symbole ankündigen.
+Vermeiden = du bekommst nichts, egal welches Symbol gezeigt wurde.
+
+P.S. Im echten Labor dauert diese Lernphase etwa 20 Minuten. Wir überspringen das hier.
+
+[[Verstanden|P5]]
+</tw-passagedata><tw-passagedata pid="34" name="Trial1" tags="" position="1475,500" size="100,100">&lt;img src=&quot;https://github.com/alicer-oss/Project-Twine/blob/main/combination_pic_1_2.jpg?raw=true&quot; style=&quot;width: 40%; display: block; margin: 15px auto;&quot;&gt;
+
+[[Weiter|Response1]]</tw-passagedata><tw-passagedata pid="35" name="P5" tags="" position="1325,500" size="100,100">Aus diesen drei Symbolen entstehen im echten Experiment drei Kombinationen:
+
+&lt;img src=&quot;https://github.com/alicer-oss/Project-Twine/blob/main/Kombis.png?raw=true&quot; style=&quot;width: 40%; display: block; margin: 15px auto;&quot;&gt;
+
+Nur die dritte Kombination erzeugt einen echten Bauchgefühl-Konflikt. Die anderen beiden? Probier kurz aus, wie einfach die sich anfühlen.
+
+**Bereit, $name?**
+
+(Kleiner Hinweis vorab: Der Buzzer ist nur ein Piepton. Kein Schreckmoment.)
+
+[[Los geht&#39;s|EasyTrial]]
+
+
+</tw-passagedata><tw-passagedata pid="36" name="Response1" tags="" position="1600,500" size="100,100">&lt;img src=&quot;https://github.com/alicer-oss/Project-Twine/blob/main/Frei_T%C3%BCr.png?raw=true&quot;width: 60%; display: block; margin: 15px auto;&quot;&gt;
+
+[[Untere Tür, ich nähere mich an|Approach1]]
+[[Obere Tür, ich vermeide|Avoid1]]</tw-passagedata><tw-passagedata pid="37" name="Avoid1" tags="" position="1725,625" size="100,100">Nichts passiert. Kein Geld, kein Buzzer-Ton.
+
+Kurz gezögert, $name? 
+
+[[Reflexion]]</tw-passagedata><tw-passagedata pid="38" name="Approach1" tags="" position="1600,625" size="100,100">+50 Cent. Und der Buzzer-Ton. 
+
+Beides, wie angekündigt.
+
+Kurz gezögert, $name? 
+
+[[Reflexion]]
+
+&lt;audio id=&quot;meinSound&quot; autoplay&gt;
+  &lt;source src=&quot;https://raw.githubusercontent.com/alicer-oss/Project-Twine/main/dragon-studio-censor-beep-3-372460.mp3&quot; 
+          type=&quot;audio/mpeg&quot;&gt;
+&lt;/audio&gt;
+
+&lt;script&gt;
+  var audio = document.getElementById(&quot;meinSound&quot;);
+  setTimeout(function() {
+    audio.pause();
+  }, 7000);
+&lt;/script&gt;
+</tw-passagedata><tw-passagedata pid="39" name="Reflexion" tags="" position="1600,750" size="100,100">Das war ein freier Trial. Du hattest die Wahl.
+
+Dein Gehirn hat in Sekunden abgewogen. Lohnt sich das Geld den Buzzer-Ton?
+
+Interessant: Im echten Experiment macht das nicht jede:r gleich. Manche greifen fast immer zu, für sie gewinnt die Belohnung. Andere vermeiden fast immer, für sie gewinnt das Risiko.
+
+Stell dir zwei Personen vor, die beide Angst vorm Fahrstuhl haben:
+→ Person A denkt: &quot;Der Termin ist wichtig, ich steig ein.&quot;
+→ Person B denkt: &quot;Zu riskant, ich nehm die Treppe.&quot;
+
+Gleiche Situation. Komplett andere Reaktion.
+
+Wissenschaftler nennen das High Avoiders vs. Low Avoiders, und diese Unterschiede sind messbar.
+
+[[Weiter|Intro2]]
+</tw-passagedata><tw-passagedata pid="40" name="Intro2" tags="" position="1725,750" size="100,100">Stell dir vor, du bist in einer Prüfung. Du musst nach vorne, egal wie nervös du bist. Die Entscheidung ist schon getroffen.
+
+Gleiches passiert das gleiche im Labor. Nur eine Tür ist offen.
+
+[[Weiter|Trial2]]</tw-passagedata><tw-passagedata pid="41" name="Trial2" tags="" position="1850,750" size="100,100">&lt;img src=&quot;https://github.com/alicer-oss/Project-Twine/blob/main/combination_pic_1_2.jpg?raw=true&quot; style=&quot;width: 40%; display: block; margin: 15px auto;&quot;&gt;
+
+
+[[Weiter|Response2]]</tw-passagedata><tw-passagedata pid="42" name="Response2" tags="" position="1975,750" size="100,100">Du musst dich annähern. Kein Ausweg.
+
+&lt;img src=&quot;https://github.com/alicer-oss/Project-Twine/blob/main/Gezwungen_T%C3%BCr.png?raw=true&quot;width: 60%; display: block; margin: 15px auto;&quot;&gt;
+
+
+[[Untere Tür, ich muss mich annähern|Outcome2]]</tw-passagedata><tw-passagedata pid="43" name="Outcome2" tags="" position="1975,875" size="100,100">+50 Cent. Und der Buzzer-Ton. 
+
+Dir blieb keine andere Wahl.
+
+[[Hat sich das anders angefühlt als eben, $name?|Reflexion2]]
+
+&lt;audio id=&quot;meinSound&quot; autoplay&gt;
+  &lt;source src=&quot;https://raw.githubusercontent.com/alicer-oss/Project-Twine/main/dragon-studio-censor-beep-3-372460.mp3&quot; 
+          type=&quot;audio/mpeg&quot;&gt;
+&lt;/audio&gt;
+
+&lt;script&gt;
+  var audio = document.getElementById(&quot;meinSound&quot;);
+  setTimeout(function() {
+    audio.pause();
+  }, 7000);
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="44" name="Reflexion2" tags="" position="1975,1000" size="100,100">* Überraschung 1. Impulse überwinden kostet Zeit.
+
+Wenn dein erster Impuls war zu vermeiden, und du dich trotzdem annähern musstest, dann braucht dein Gehirn länger. Es muss seinen eigenen Automatismus überwinden. Das ist im echten Experiment messbar: Erzwungene Reaktionen gegen den eigenen Impuls sind signifikant langsamer.
+
+* Überraschung 2. Die Unerwartete. Es fiel Teilnehmenden leichter, sich einem Schock-Reiz anzunähern, wenn gleichzeitig Geld winkte,  als wenn der Schock allein da war.
+
+Die Belohnung senkt die Hemmschwelle. Das klingt seltsam, aber genau das zeigen die Daten.
+
+Alltagsbeispiel: Stell dir vor, du musst zum Zahnarzt, eigentlich das Letzte, was du willst. Aber danach wartet dein Lieblingsessen. Plötzlich fällt der Gang leichter. Das ist keine Einbildung, das ist Conflict Facilitation.
+
+Und genau das könnte Expositionstherapie verbessern. Bedrohungsreize mit Belohnungen koppeln, damit das Angehen des Schwierigen leichter fällt.
+
+[[Weiter|Trial3]]
+</tw-passagedata><tw-passagedata pid="45" name="Trial3" tags="" position="2100,1000" size="100,100">Diesmal musst du vermeiden, auch wenn Geld auf dem Spiel steht.
+
+[[Weiter|Anticipation3]]</tw-passagedata><tw-passagedata pid="46" name="Anticipation3" tags="" position="2225,1000" size="100,100">&lt;img src=&quot;https://github.com/alicer-oss/Project-Twine/blob/main/combination_pic_1_2.jpg?raw=true&quot; style=&quot;width: 40%; display: block; margin: 15px auto;&quot;&gt;
+
+[[Weiter|Response3]]</tw-passagedata><tw-passagedata pid="47" name="Response3" tags="" position="2350,1000" size="100,100">&lt;img src=&quot;https://github.com/alicer-oss/Project-Twine/blob/main/Vermeidung_Gezwungen_T%C3%BCr.png?raw=true&quot; style=&quot;width: 40%; display: block; margin: 15px auto;&quot;&gt;
+
+Du musst vermeiden. Das Geld bleibt liegen.
+
+[[Obere Tür, ich muss vermeiden|Outcome3]]</tw-passagedata><tw-passagedata pid="48" name="Outcome3" tags="" position="2350,1125" size="100,100">Nichts passiert. Kein Buzzer-Ton, aber auch kein Geld.
+
+Du musstest das Geld liegen lassen. 
+
+[[Weiter|Reflexion3]]</tw-passagedata><tw-passagedata pid="49" name="Reflexion3" tags="" position="2350,1250" size="100,100">Du hast jetzt alle drei Varianten erlebt, $name.
+
+Im echten Labor misst man das alles gleichzeitig:
+
+* Die Herzrate, verlangsamt sich bei Bedrohung, noch bevor entschieden wird
+* Blickbewegungen, die Augen wandern schon zur bevorzugten Tür, bevor die Person entschieden hat
+* Die Pupillengröße, reagiert auf die emotionale Intensität des Reizes
+
+So sieht man nicht nur was jemand entscheidet, sondern auch wie der Körper sich dabei anfühlt, noch bevor die Entscheidung bewusst getroffen wurde.
+
+Im meinem Experiment macht jede Person das pro Symbol-Bedingung 10-mal frei entscheidend, 5-mal erzwungen annähernd und 5-mal erzwungen vermeidend, insgesamt über alle Bedingungen 180 Mal. Das dauert zwei Stunden. 
+
+Ich habe heute nur den Kern gezeigt. Was passiert aber im Konfliktmoment?
+
+[[Weiter|TakeHome]]
+</tw-passagedata><tw-passagedata pid="50" name="TakeHome" tags="" position="2475,1250" size="100,100">1. Bauchgefühl-Konflikte begegnen dir ständig.
+Beim Date, bei der Präsentation, überall im Alltag.
+
+2. Frei vs. erzwungen macht einen Unterschied.
+Ob du selbst entscheidest oder nicht, das verändert, wie dein Gehirn reagiert. Erzwungene Reaktionen gegen den eigenen Impuls brauchen messbar mehr Zeit.
+
+3. Eine Belohnung kann Angst überwinden helfen.
+Wenn Bedrohung (Buzzer) und Belohnung (Geld) zusammen auftauchen, sinkt die Hemmschwelle, das Schwierige anzugehen. Das hat direkte Konsequenzen für die Therapie von Angststörungen.
+
+[[Abschluss|Abschluss]]
+</tw-passagedata><tw-passagedata pid="51" name="Abschluss" tags="" position="2600,1250" size="100,100">&lt;blockquote style=&quot;
+  text-align: center;
+  border-left: none;
+  margin: 30px auto;
+  max-width: 800px;
+&quot;&gt;
+  &lt;p&gt;&lt;em&gt;„Between stimulus and response there is a space. In that space is our power to choose our response.&quot;&lt;/em&gt;&lt;/p&gt;
+  &lt;p style=&quot;margin-top: 1em; color: #aaa; font-size: 0.9em;&quot;&gt;— Viktor Frankl&lt;/p&gt;
+&lt;/blockquote&gt;
+
+Genau dieser Raum zwischen Reiz und Reaktion, das kurze Zögern, das du eben selbst gespürt hast, ist das, was mich in meiner Forschung interessiert.
+
+Was passiert in diesem Moment im Gehirn?
+Was verändert sich, wenn wir keine Wahl haben?
+Und wie können wir das nutzen, um Menschen mit Angststörungen besser zu helfen?
+
+Die Antworten gibt&#39;s in meiner Masterarbeit. 
+
+Danke, dass du mitgemacht hast. 
+
+[[Ende]]
+
+</tw-passagedata><tw-passagedata pid="52" name="EasyTrial" tags="" position="1325,625" size="100,100">&lt;img src=&quot;https://github.com/alicer-oss/Project-Twine/blob/main/EasyTrial.png?raw=true&quot; style=&quot;width: 40%; display: block; margin: 15px auto;&quot;&gt;
+
+[[Weiter|EasyTrialResponse]]</tw-passagedata><tw-passagedata pid="53" name="EasyTrialResponse" tags="" position="1325,750" size="100,100">&lt;img src=&quot;https://github.com/alicer-oss/Project-Twine/blob/main/Frei_T%C3%BCr.png?raw=true&quot; style=&quot;width: 40%; display: block; margin: 15px auto;&quot;&gt;
+
+Untere Tür = Annähern | Obere Tür = Vermeiden
+
+[[Untere Tür, ich nähere mich an|EasyTrialApproach]]
+[[Obere Tür, ich vermeide|EasyTrialAvoidance]]</tw-passagedata><tw-passagedata pid="54" name="EasyTrialApproach" tags="" position="1325,875" size="100,100">+50 Cent. Kein Buzzer-Ton. Leicht, oder?
+
+[[Weiter|Trial0]]</tw-passagedata><tw-passagedata pid="55" name="EasyTrialAvoidance" tags="" position="1450,875" size="100,100">Nichts passiert. Leicht, oder?
+
+[[Weiter|Trial0]]</tw-passagedata><tw-passagedata pid="56" name="Trial0" tags="" position="1450,1000" size="100,100">Gemerkt, $name? Wenn nur ein Symbol mit dem neutralen Quadrat gezeigt wird, ist die Entscheidung einfach.
+
+Jetzt kommt die schwierige Variante:
+&lt;img src=&quot;https://github.com/alicer-oss/Project-Twine/blob/main/combination_pic_1_2.jpg?raw=true&quot; style=&quot;width: 40%; display: block; margin: 15px auto;&quot;&gt;
+
+Annähern bedeutet: Geld und Buzzer-Ton. Beides sicher.
+
+Dein Gehirn muss jetzt zwei gegensätzliche Signale gleichzeitig verarbeiten.
+
+[[Los geht&#39;s|Trial1]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
